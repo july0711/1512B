@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Document</title>
+    <style>
+        *{
+            padding:0;
+            margin:0;
+            list-style:none;
+        }
+
+        .box{
+            width:600px;
+            height:50px;
+            margin:10px auto;
+        }
+        .box ul{
+            width:600px;
+            height:50px;
+            background:#000;
+        }
+        .box ul .yes{
+            display: inline-block;
+            color:#fff;
+            width:15.7%;
+            text-align:center;
+            line-height:50px;
+            border-right:1px solid #ccc;
+            position: relative;
+        }
+        .box ul>.yes.on{
+            color:red;
+        }
+        .box ul>.yes:nth-child(6){
+            border-right:none;
+        }
+        .box ul>.yes>ol{
+            width:100px;
+            height:300px;
+            background:#999;
+            display: none;
+            position: absolute;
+            top:50px;
+        }
+        .box ul>.yes ol.show{
+            display: block;
+            color:#fff;
+        }
+        .box ul>.yes>ol>li{
+            display: block;
+            font-size:14px;
+        }
+    </style>
+</head>
+<body>
+<div class="box">
+    <ul>
+        <li class="yes">全商品特级
+        <ol>
+            <li>UT系列</li>
+            <li>UT系列</li>
+            <li>UT系列</li>
+            <li>UT系列</li>
+            <li>UT系列</li>
+            <li>UT系列</li>
+        </ol>
+        </li>
+        <li class="yes">c特级
+            <ol>
+            <li>UT系列</li>
+            <li>UT系列</li>
+            <li>UT系列</li>
+            <li>UT系列</li>
+            <li>UT系列</li>
+            <li>UT系列</li>
+        </ol>
+        </li>
+        <li class="yes">c特级
+            <ol>
+            <li>UT系列</li>
+            <li>UT系列</li>
+            <li>UT系列</li>
+            <li>UT系列</li>
+            <li>UT系列</li>
+            <li>UT系列</li>
+        </ol>
+        </li>
+        <li class="yes">c特级
+            <ol>
+            <li>UT系列</li>
+            <li>UT系列</li>
+            <li>UT系列</li>
+            <li>UT系列</li>
+            <li>UT系列</li>
+            <li>UT系列</li>
+        </ol>
+        </li>
+        <li class="yes">c特级
+            <ol>
+            <li>UT系列</li>
+            <li>UT系列</li>
+            <li>UT系列</li>
+            <li>UT系列</li>
+            <li>UT系列</li>
+            <li>UT系列</li>
+        </ol>
+        </li>
+        <li class="yes">c特级
+            <ol>
+            <li>UT系列</li>
+            <li>UT系列</li>
+            <li>UT系列</li>
+            <li>UT系列</li>
+            <li>UT系列</li>
+            <li>UT系列</li>
+        </ol>
+        </li>
+    </ul>
+</div>
+<script src="jquery-2.1.1.min.js"></script>
+<script>
+    $(document).ready(function(){
+        $('.yes').hover(function(){
+            $(this).addClass('on').siblings().removeClass('on');
+            $('.on ol').addClass('show');
+        },function(){
+            $('.on ol').removeClass('show');
+        })
+    })
+</script>
+</body>
+</html>
